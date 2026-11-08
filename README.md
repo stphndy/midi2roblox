@@ -44,7 +44,8 @@ pip install -r requirements.txt
 
 1. Connect the keyboard and switch it on. Close any other app using it
    (Windows lets only one program open a MIDI port at a time).
-2. Run:
+2. Double-click the **Roblox Piano** desktop icon (see
+   [Desktop shortcut](#desktop-shortcut)), or run:
    ```
    python midi2roblox.py
    ```
@@ -54,6 +55,27 @@ pip install -r requirements.txt
 4. Play. Press Ctrl+C in the terminal to stop.
 
 Turn your keyboard's own volume down, or you'll hear both it and the game.
+
+### Desktop shortcut
+
+For one-click starting, double-click `Create Desktop Shortcut.bat` once, after
+following the installation steps. It adds a **Roblox Piano** icon to the
+Desktop and Start menu. If you move the project folder, run it again.
+
+The icon runs `midi2roblox.bat`, which starts the app with the first Python it
+finds: the project's `.venv`, then `py -3.12`, then `python`. A terminal
+window opens; close it or press Ctrl+C to stop. The window stays open after
+the app exits so any error message can be read.
+
+To always use certain options, add them to the shortcut's **Target** box (right-click
+the icon → Properties), e.g. `...\midi2roblox.bat --port P-125`.
+
+| File | Purpose |
+| --- | --- |
+| `midi2roblox.bat` | Launcher; can also be double-clicked directly |
+| `Create Desktop Shortcut.bat` | Creates the Desktop and Start menu shortcuts |
+| `assets/create_shortcut.ps1` | Does the work for the above |
+| `assets/midi2roblox.ico` | Shortcut icon |
 
 ### Options
 
